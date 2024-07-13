@@ -1,6 +1,10 @@
 import os
 import tweepy
 import spacy
+from dotenv import load_dotenv
+
+load_dotenv("variables.env")
+
 
 # Credenciales de la API de Twitter
 api_key = os.getenv('API_KEY')
