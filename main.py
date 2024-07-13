@@ -1,9 +1,6 @@
 import os
 import tweepy
 import spacy
-import en_core_web_sm
-import es_core_news_sm
-
 
 # Credenciales de la API de Twitter
 api_key = os.getenv('TWITTER_API_KEY')
