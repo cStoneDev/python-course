@@ -7,6 +7,9 @@ from nltk.sentiment import SentimentIntensityAnalyzer
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+# Descargar los recursos necesarios para nltk
+nltk.download('vader_lexicon')
+
 # Inicializar el analizador de sentimientos de nltk
 sia = SentimentIntensityAnalyzer()
 
@@ -171,7 +174,7 @@ def cargar_datos():
         uploaded_file = "Final_Project\\data_frames\\twitter_comments_ready2go.csv"
     elif option == propio:
         uploaded_file = st.sidebar.file_uploader("**Suba el dataset en formato CSV**", type=["csv"])
-        st.sidebar.info('*"El formato del dataset debe inlcuir una primera columna llamada **entity** y una segunda columna llamada **content**"*')
+        st.sidebar.info('*"El formato del dataset debe incluir una primera columna llamada **entity** y una segunda columna llamada **content**"*')
 
     if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
@@ -216,11 +219,11 @@ def main():
 
     if df is not None:
         name = st.session_state['name']
-        if name == 'twitter_training.csv':
+        if 'polaridad_desc' not in df.columns:
             st.write('### Análisis de sentimientos')
             analyze_sentiment_dataset()
             vizualizacion(df)
-        elif name == 'twitter_comments_ready2go.csv':
+        else:
             vizualizacion(df)
 
         st.sidebar.markdown("---")
