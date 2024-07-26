@@ -28,7 +28,9 @@ El `Final_Project` es un análisis interactivo de sentimientos de tweets utiliza
 1. **Carga de Datos**:
    - Permite al usuario seleccionar entre datasets previamente procesados (`twitter_comments_ready2go.csv`), sin procesamiento (`twitter_training.csv`), o cargar su propio dataset.
 
-   >[!NOTE] El dataset El formato del dataset a cargar debe incluir una primera columna llamada `entity` (la cual contendrá las entidades sobre las cuales los usuarios han escrito) y una segunda columna llamada `content` (la cual contendrá el contenido de los tweets en texto plano relacionado con una entidad en específico)
+> [!NOTE]
+> El dataset El formato del dataset a cargar debe incluir una primera columna llamada `entity` (la cual contendrá las entidades sobre las cuales los usuarios han escrito) y una segunda columna llamada `content` (la cual contendrá el contenido de los tweets en texto plano relacionado con una entidad en específico)
+
 
 2. **Análisis de Sentimientos**:
    - Utiliza el analizador de sentimientos de `nltk` para evaluar la polaridad (positivo/negativo) y neutralidad de los tweets.
