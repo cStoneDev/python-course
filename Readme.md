@@ -13,6 +13,7 @@ Este repositorio contiene varios proyectos, siendo el principal el `Final_Projec
     - `twitter_training.csv`: Dataset sin procesamiento previo.
   - `photos`: Carpeta para almacenar fotos relacionadas con el readme.
   - `main.py`: Archivo principal que contiene el código para realizar el análisis de sentimientos de tweets. (Ver detalles abajo)
+  - `requirements.txt`: Archivo de requisitos para ejecutar el proyecto
 
 - `Maze`
   - `ej.py`: Proyecto independiente relacionado con la resolución de laberintos mediante bfs.
